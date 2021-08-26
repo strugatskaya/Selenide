@@ -14,8 +14,10 @@ dependencies {
     testImplementation 'com.codeborne:selenide:5.19.0'
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     testImplementation 'com.github.javafaker:javafaker:1.0.1'
+
 }
 
 test {
     useJUnitPlatform()
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
 }
